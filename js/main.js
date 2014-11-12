@@ -10,4 +10,12 @@ $(document).ready( function(){
 	image.css("left", -(imageWidth/7)*3 + "px" );
 	container.css("width", (imageWidth/7) + "px");
 
+	
 } );
+
+$('#headturn').mousemove( function(event){
+	var pageCoords = "( " + event.pageX + ", " + event.pageY + " )";
+	var clientCoords = "( " + event.clientX + ", " + event.clientY + " )";
+	$("#s1").text( "( event.pageX, event.pageY ) : " + pageCoords );
+	$("#s2").text( "( event.clientX, event.clientY ) : " + clientCoords );
+});
