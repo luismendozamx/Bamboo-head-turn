@@ -1,5 +1,8 @@
 $(document).ready( function(){
+	
+} );
 
+function createimage(){
 	//Get jquery elements
 	image = $('#headturn');
 	container = $('#headturn-container');
@@ -18,8 +21,7 @@ $(document).ready( function(){
 
 	//Adjust container size to hide overflow
 	container.css("width", (imageWidth/frameCount) + "px");
-	
-} );
+}
 
 $('#headturn').mousemove( function(event){
 
