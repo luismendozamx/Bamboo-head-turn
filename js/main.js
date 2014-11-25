@@ -39,11 +39,16 @@ $('#headturn').mousemove( function(event){
 	$("#s3").text( " clientX : " + clientX );
 	$("#s4").text( " clientY : " + clientY );
 
-	//
+	//Get the parent container offset left
 	parenOffsetX = $('#headturn-container').offset().left;
+
+	//Calculate Offset
 	var offset = getOffset(frameWidth, positionX, frameCount, parenOffsetX);
+
+	//Apply offset to image
 	image.css("left", -(imageWidth/frameCount)*(offset) + "px" );
 
+	//Print Offset
 	$("#s5").text( " offset : " + offset );
 
 
